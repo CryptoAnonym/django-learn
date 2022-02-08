@@ -31,5 +31,5 @@ class Vote(models.Model):
     status = models.CharField(choices=VOTE_STATUS, max_length=30, default="Waiting for edit")
 
     def __str__(self):
-        return self.status
+        return f"ID: {self.id}"
 
