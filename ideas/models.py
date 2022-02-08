@@ -8,13 +8,28 @@ IDEA_STATUS = (
     ("rejected", "Rejected"),
 )
 
+VOTE_STATUS = (
+    ("Waiting for edit", "Waiting for edit"),
+    ("PLUS", "PLUS"),
+    ("MINUS", "MINUS"),
+    ("INFO", "INFO"),
+    ("QUESTION","QUESTION ")
+)
+
 class Idea(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     youtube_url = models.URLField(blank=True, null=True)
     status = models.CharField(choices=IDEA_STATUS, max_length=30, default="pending")
 
+    def __str__(self):
+        return self.title
+
 class Vote(models.Model):
     idea = models.ForeignKey(Idea, on_delete=models.CASCADE)
-    reason = models.TextField()
+    komentarz = models.TextField()
+    status = models.CharField(choices=VOTE_STATUS, max_length=30, default="Waiting for edit")
+
+    def __str__(self):
+        return self.status
 
