@@ -16,6 +16,7 @@ VOTE_STATUS = (
     ("QUESTION","QUESTION ")
 )
 
+
 class Idea(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
@@ -24,6 +25,7 @@ class Idea(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Vote(models.Model):
     idea = models.ForeignKey(Idea, on_delete=models.CASCADE)
