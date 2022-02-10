@@ -3,13 +3,15 @@ version: "3.9"
 services:
   db:
     image: postgres
+    
     environment:
-      - POSTGRESS_DB=youtube
-      - POSTGRESS_USER=youtube
-      - POSTGRESS_PASSWORD=youtube123
+      - POSTGRES_DB=youtube
+      - POSTGRES_USER=youtube
+      - POSTGRES_PASSWORD=youtube123
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: 
+      - python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code/
     ports:
