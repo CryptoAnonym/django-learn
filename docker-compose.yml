@@ -5,13 +5,12 @@ services:
     image: postgres
     
     environment:
-      - POSTGRES_DB=youtube
+      - POSTGRES_DB=youtube1
       - POSTGRES_USER=youtube
       - POSTGRES_PASSWORD=youtube123
   web:
     build: .
-    command: 
-      - python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code/
     ports:
