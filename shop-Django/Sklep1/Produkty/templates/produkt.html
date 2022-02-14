@@ -1,0 +1,26 @@
+{% extends "szablon.html" %}
+
+{% block produkt %}
+{% if produkt_user %}
+<div style="width: auto; height: 500px; margin: 30px; float:left; background-color: #a07676; font-size: 15px; color: white; ">
+<center>Miejsce na zdjęcie </center>
+</div>
+<div style="float:left; margin: 25px;">
+<h1>{{ produkt_user.nazwa}} </center></h1>
+    <p>Producent: {{ produkt_user.producent}}</p>
+    <p>Opis: {{ produkt_user.opis}}</p>
+    <img src= "{{ produkt_user.obrazek.url }} ">  
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p><h2> Cena: {{ produkt_user.cena}} PLN</h2></p>
+</div>"
+{% else %}
+
+    <p>Nie ma produktu o takim id.</p>
+
+{% endif %}
+{% endblock produkt %}
