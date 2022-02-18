@@ -2,22 +2,26 @@
 
 {% block produkt %}
 {% if produkt_user %}
-<div style="width: auto; height: 500px; margin: 30px; float:left; background-color: #a07676; font-size: 15px; color: white; ">
-<center>Miejsce na zdjęcie </center>
+<div class="square1">
+    <div class="tile5">
+
+<h1><center>{{ produkt_user.nazwa}} </center></h1>
+<div class="dane">
+    <p><b>Producent:</b> {{ produkt_user.producent}}</p>
+    <p><b>Opis:</b> {{ produkt_user.opis}}</p>
+
 </div>
-<div style="float:left; margin: 25px;">
-<h1>{{ produkt_user.nazwa}} </center></h1>
-    <p>Producent: {{ produkt_user.producent}}</p>
-    <p>Opis: {{ produkt_user.opis}}</p>
-    <img src= "{{ produkt_user.obrazek.url }} ">  
     
     
     
     
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <p><h2> Cena: {{ produkt_user.cena}} PLN</h2></p>
-</div>"
+    <br>
+    <div class="cena"> 
+        <b>Cena:</b> {{ produkt_user.cena}} PLN</h2></p>
+    </div>
+</div>
+
+
 {% else %}
 
     <p>Nie ma produktu o takim id.</p>

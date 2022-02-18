@@ -1,0 +1,507 @@
+body
+{
+	background-color: #191d21;
+	color:black;
+	font-family: 'Open Sans', sans-serif;
+	font-size:17px;
+	margin:0px;
+	color: #efefef;
+	
+}
+
+.top
+{
+	
+	margin-top:0;
+	text-align:center;
+	
+}
+
+.top>li
+{
+	list-style-type:none;
+	display:inline-block;
+	color:white;
+	padding:15px;
+	font-size:17px;
+	vertical-align: middle;
+	margin-right:60px;
+	
+}
+
+.menu
+{
+	list-style-type:none;
+	text-align:center;
+	background-color:#303030;
+	padding:20px;
+		
+}
+
+
+.menu>li
+{
+	display:inline-block;
+	border-right:1px dashed #444444;
+	font-size:25px;
+	padding-left:20px;
+	padding-right:20px;
+	margin-right:30px;
+	
+}
+
+.menu>li:first-child
+{
+	border-left:1px dashed #444444;
+}
+
+.menu a
+{
+	text-decoration:none;
+	color:white;
+}
+
+.menu a:hover
+{
+	color:#39a5f1;
+}
+
+.bluebutton
+
+{
+	font-size:20px;
+	background-color: #39a5f1;
+	text-decoration:none;
+	color:white;
+	border-radius:5px;
+	padding:15px 10px;
+	outline:none;
+	letter-spacing: 2px;
+	cursor:pointer;
+	border:none;
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	
+	
+}
+
+.bluebutton:hover
+
+{
+	background-color:#196499;
+}
+
+a:link
+{
+	text-decoration:none;
+}
+
+.img
+{
+	background-image: url("img/tir.png");
+	background-size:cover;
+	height:400px;
+	margin-top:40px;
+	position:relative;
+	overflow:hidden;	
+	
+}
+
+.img p
+
+{
+	text-align:center;
+	font-size:60px;
+	letter-spacing: 10px;
+	color:#39a5f1;
+	height:80px;
+	padding-top:60px;
+	white-space:nowrap;
+	animation: przesun 30s linear infinite;
+	position:absolute;
+		
+}
+
+.img p:hover
+{
+	animation-play-state:paused;
+}
+
+@keyframes przesun
+{
+	0% {transform:translateX(0); padding-left:110%; }
+	100% {transform:translateX(-100%); padding-left:110%; }
+}
+
+
+.topbar
+{
+	background-color:#303030;
+	width:100%;
+	text-align:justify;
+	padding-top:20px;
+	
+}
+
+.topbarall
+{
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+#topbarL 
+{
+	float:left;
+	width:160px;
+	padding:30px;
+	margin-top:100px;
+	padding-left:0px;
+	
+	
+}
+
+#topbarL img
+
+{
+	border-radius:5px;
+	width:300px;
+	
+}
+
+#topbarR 
+{
+	float:left;
+	width:600px;
+	font-size:20px;
+	color:white;
+	padding-left:180px;
+	padding-bottom:20px;
+	
+}
+
+.why
+{
+	width:70%;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 20px;
+	
+}
+
+
+.newest
+{
+	background-color:#191d21;
+}
+
+.entries
+
+{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:80px;
+	width:950px;
+	margin-top:40px;
+	
+}
+
+.entry
+{
+	background-color:#222930;
+	padding:30px;
+	text-align:justify;
+	margin-top:40px;
+	border-radius:5px;
+	font-size:18px;
+	
+	
+}
+
+.entryimg
+{
+	float:left;
+	margin-left: 30px;
+	width:300px;
+	
+}
+
+.entryimg img
+{
+	width:150px;
+	height:130px;
+	border-radius:5px;
+
+}
+
+.entrytxt
+{
+	float:left;
+	width:600px;	
+}
+
+h2
+{
+	color:#39a5f1;
+	text-align:center;
+	font-size:40px;
+	padding-top:5px;
+}
+
+h3
+
+{
+	color:#39a5f1;
+	text-align:center;
+	font-size:20px;
+	margin-top:0px;
+}
+
+.user
+{
+	background-color:#303030;
+	padding-bottom:20px;
+}
+
+.useres
+{
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:20px;
+}
+
+.tw
+{
+	float:left;
+	width:250px;
+	height:120px;
+	font-size:72px;
+	
+
+}
+
+.tw:hover
+{
+	background-color: #3095d3;
+}
+
+.fb
+{
+	float:left;
+	width:250px;
+	height:120px;
+	font-size:72px;
+	
+}
+
+.fb:hover
+{
+	background-color: #4668b3;
+}
+
+.yt
+{
+	float:left;
+	width:250px;
+	height:120px;
+	font-size:72px;
+	
+}
+
+.yt:hover
+{
+	background-color: #d94348;
+}
+
+.gplus
+{
+	float:left;
+	width:250px;
+	height:120px;
+	font-size:72px;
+	
+}
+
+.gplus:hover
+{
+	background-color: #d95333;
+}
+
+.socialll
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+}
+
+.social
+{
+	text-align:center;
+	width:100%;
+}
+
+a.sociallink
+{
+	display:block;
+	text-decoration:none;
+	color:white;
+}
+.info
+{
+	text-align:center;
+	font-size:20px;
+	background-color:#303030;
+	padding:20px;
+}
+
+.scrollup
+{
+	width:64px;
+	height:64px;
+	text-decoration:none;
+	background: url("img/up.png") no-repeat 0px 0px;
+	position:fixed;
+	right:50px;
+	bottom:2px;
+	display:none;
+}
+
+.kontaktimg
+{
+	background-image: url("img/tir.png");
+	background-size:cover;
+	height:400px;
+	margin-top:40px;
+	position:relative;
+	overflow:hidden;	
+	
+}
+
+.kontaktimg p
+
+{
+	text-align:center;
+	font-size:60px;
+	letter-spacing: 10px;
+	color:#39a5f1;
+	height:80px;
+	padding-top:60px;
+	white-space:nowrap;
+	animation: przesun 30s linear infinite;
+	position:absolute;
+		
+}
+
+.kontaktimg p:hover
+{
+	animation-play-state:paused;
+}
+
+@keyframes przesun
+{
+	0% {transform:translateX(0); padding-left:110%; }
+	100% {transform:translateX(-100%); padding-left:110%; }
+}
+
+.container
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+	padding-bottom:110px;
+	
+}
+
+.west
+{
+	float:left;
+	width:500px;
+	padding-left:20px;
+	padding-top:30px;
+}
+
+.east
+{
+	float:left;
+	width:340px;
+	padding-top:30px;
+	font-size:20px;
+	text-align:justify;
+	padding-left:80px;
+}
+
+.east ul>li
+{
+	list-style-type:none;
+	margin-bottom:10px;
+	
+}
+
+input[type="text"]
+{
+	width:180px;
+	height:30px;
+	margin-top:10px;
+	margin-left:5px;
+	font-size:15px;
+	box-sizing: border-box;
+	outline:none;
+	border-radius:5px;
+	border:2px solid #ddd;
+	color:#666;
+	
+}
+
+input[type="text"]:focus
+{
+	border:3px solid #39a5f1;
+}
+
+input[type="text1"]
+{
+	width:300px;
+	height:100px;
+	margin-top:10px;
+	margin-left:30px;
+	font-size:15px;
+	box-sizing: border-box;
+	outline:none;
+	border-radius:5px;
+	border:2px solid #ddd;
+	color:#666;
+}
+
+input[type="text1"]:focus
+{
+	border:3px solid #39a5f1;
+}
+
+input[type="submit"]
+{
+	margin-top:10px;
+	outline:none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	font-size:20px;
+	width:150px;
+	height:50px;
+	margin-left:100px;
+	border:3px solid #39a5f1;
+	-webkit-box-shadow: 1px 0px 50px -8px rgba(24, 40, 142, 1);
+	-moz-box-shadow: 1px 0px 50px -8px rgba(24, 40, 142, 1);
+	box-shadow: 1px 0px 50px -8px rgba(24, 40, 142, 1);
+}
+
+input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 1);
+	box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 1);
+}

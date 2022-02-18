@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>NewArthDev - curriculum vitae </title>
+	
+	<meta name="description" content="Stworzę dla Ciebie wyjątkową stronę www lub program! Zatrudnij programistę: Python, HTML, CSS, SQL," />
+	<meta name="keywords" content="zamów, stronę, tworzenie, www, programista, portfolio, php, javascript, html, css, Python, developer, blockchain" />
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@400;900&display=swap');
+	</style>
+	
+	<script src= "timer.js"></script>
+</head>
+<div style="width: 1200px;margin-left: auto; margin-right: auto;background-color: #573a3a;">
+
+    <div style="width: 1200px; height: 80px; float:left; background-color: #303030; font-size: 15px; text-align: center; color: white; ">
+    <h1>LOGO SKLEPU             </h1>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div style="width:180px;height: 560px; float:left; background-color: #303030; font-size: 15px; text-align: center; color: white; ">
+        <h3> MENU </h3> 
+        {%  for kat in kategorie   %}
+            <p> <a href = "/kategoria/{{ kat.id }}">{{ kat.nazwa }}</a> </p>
+        {%  endfor  %}
+    </div>
+
+    <div style="width: 700; float: left;">
+        {% block produkt %}  {% endblock produkt %}
+    </div>
+
+    <div style="clear:both"></div>
