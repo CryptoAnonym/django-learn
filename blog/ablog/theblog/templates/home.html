@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
-{% block title %} This is post... {% endblock %}
+{% block title %} This is idea... {% endblock %}
 
 
 {% block content %}
 
 
-<h1> Posty: </h1>
+<h1> Ideas: </h1><br>
 
 <ul>
 {% for post in object_list %}
     <li><a href="{% url 'article-detail' post.pk %}"> {{ post.title }}</a> 
         - {{ post.author.first_name }}
-        {{ post.author.last_name }} - {{ post.author.email }} <br/>
+        {{ post.author.last_name }} - {{ post.author.email }}
+        <small>
+            <a href="{% url 'update_post' post.pk %}"> (Edit) </a>
+            <a href="{% url 'delete_post' post.pk %}"> (Delete) </a>
+        </small> <br/>
     {{ post.body }}</li><br/>
 
 

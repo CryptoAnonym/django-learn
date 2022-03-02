@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Edit Idea {% endblock %}
+{% block content %}
+
+
+<h1> Update Idea... </h1>
+<br/> <br/>
+
+<div class="mb-3">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" value="Submit" class="btn btn-secondary">UPDATE !</button>
+        <a href="{% url 'delete_post' post.pk %}" class="btn btn-secondary">DELETE !</a>
+      </form>
+</div>
+
+
+
+
+{% endblock %}
