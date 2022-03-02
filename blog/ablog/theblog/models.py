@@ -5,7 +5,7 @@ from django.urls import reverse
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    title_TAG = models.CharField(max_length=255, default="My BLOG! " )
+    title_TAG = models.CharField(max_length=255, default="My BLOG! " )  # on nie zostawił
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
 
@@ -13,5 +13,8 @@ class Post(models.Model):
         return self.title + ' | ' + str(self.author)
 
     
+    #def get_absolute_url(self):
+        #return reverse('article-detail', args=[str(self.id)])
+
     def get_absolute_url(self):
-        return reverse('article-detail', args=[str(self.id)])
+        return reverse('home')
