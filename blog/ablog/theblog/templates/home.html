@@ -12,14 +12,20 @@
     <li><a href="{% url 'article-detail' post.pk %}"> {{ post.title }}</a> 
         - {{ post.author.first_name }}
         {{ post.author.last_name }} - <small>{{ post.post_date }}</small>
-        
+       
         {% if user.is_authenticated %}
+        {% if user.is_superuser == True %}
+        <small>
+            <a href="{% url 'update_post' post.pk %}"> (Edit) </a>
+            <a href="{% url 'delete_post' post.pk %}"> (Delete) </a>
+        </small>
+        {% elif post.author.email == user.email %}
         <small>
             <a href="{% url 'update_post' post.pk %}"> (Edit) </a>
             <a href="{% url 'delete_post' post.pk %}"> (Delete) </a>
         </small>
         {% endif %}<br/>
-
+        {% endif %}
     {{ post.body|slice:":175" }}</li><br/>
 
 
