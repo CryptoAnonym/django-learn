@@ -30,7 +30,7 @@
                 <a class="nav-link" href="{% url 'logout' %}">Logout</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Hello: {{ user.username }} Last: {{ user.last_login }}</a>
+                <a class="nav-link" href="{% url 'profil' %}">Hello: {{ user.username }} </a>
               </li>
 
               {% else %}

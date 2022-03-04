@@ -39,3 +39,7 @@ class DeletePostView(DeleteView):
 class LogoutView(ListView):
     model = Post 
     template_name = 'logout.html'
+
+class ProfilView(ListView):
+    model = Post 
+    template_name = 'profil.html'
