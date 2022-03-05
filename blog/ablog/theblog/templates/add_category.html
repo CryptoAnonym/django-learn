@@ -1,22 +1,24 @@
 {% extends 'base.html' %}
-{% block title %} Create a new post... {% endblock %}
+{% block title %} Create a new category... {% endblock %}
 {% block content %}
 
   {% if user.is_authenticated %}
-    <h1> Add Post... </h1>
-    <smal>(HTML is acctive!)</smal>
+  {% if user.is_superuser == True %}
+    <h1> Add Category... </h1>
+    <smal></smal>
     <br/> <br/>
     
     <div class="mb-3">
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" value="Submit" class="btn btn-secondary">SEND POST!</button>
+            <button type="submit" value="Submit" class="btn btn-secondary">ADD CATEGORY!</button>
           </form>
     </div>
 
   {% else %}
     <h1><center>Access denied !</h1>
+  {% endif %}
   {% endif %}
 
 {% endblock %}

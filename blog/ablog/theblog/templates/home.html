@@ -11,7 +11,7 @@
 {% for post in object_list %}
     <li><a href="{% url 'article-detail' post.pk %}"> {{ post.title }}</a> 
         - {{ post.author.first_name }}
-        {{ post.author.last_name }} - <small>{{ post.post_date }}</small>
+        {{ post.author.last_name }} - <small>{{ post.post_date }}</small>- {{ post.category }}
        
         {% if user.is_authenticated %}
         {% if user.is_superuser == True %}
@@ -26,7 +26,7 @@
         </small>
         {% endif %}<br/>
         {% endif %}
-    {{ post.body|slice:":175" }}</li><br/>
+    {{ post.body|slice:":200"|safe }}</li><br/>
 
 
 {% endfor %}
