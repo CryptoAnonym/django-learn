@@ -26,17 +26,21 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'add_post' %}">Add Idea</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'cat' %}">All Category</a>
+              </li>
               {% if user.is_superuser == True %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'add_category' %}">Add Category</a>
               </li>
               {% endif %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="{% url 'profil' %}">Hello: {{ user.username }} </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+  
 
               {% else %}
                 
